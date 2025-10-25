@@ -8,7 +8,7 @@ Currently, when using HAK the centralised AI provider (e.g. OpenAI) that you cho
 
 ## 📹 Demo Video
 
-[![Project Demo](https://cdn.loom.com/sessions/thumbnails/4b3b548431084761aa650d04044f1157-with-play.gif)](https://www.loom.com/share/4b3b548431084761aa650d04044f1157)
+[Watch video overview of project](https://www.loom.com/share/4b3b548431084761aa650d04044f1157)   
 
 ## 🚀 Quick Start
 
