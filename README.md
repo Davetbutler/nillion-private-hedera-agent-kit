@@ -1,10 +1,10 @@
 # Hedera Agent Kit - Private Implementation
 
-A submission for ETHOnline hackathon using HederaAgentKit. This project creates a private version of the Hedera Agent Kit for secure, decentralized agent interactions.
+A submission for ETHOnline hackathon using HederaAgentKit.
 
-## 🎯 Project Overview
+## 🎯 Project Goal
 
-This implementation provides a private, secure environment for running Hedera agents with enhanced privacy controls and decentralized capabilities.
+Currently, when using HAK the centralised AI provider (e.g. OpenAI) that you choose to use gets to see all the queries you are making. I wanted to avoid this, and implement the HAK to be compatibale with nilAI. nilAI provides private AI inference, run inside a TEE. Watch the short video below for an overview of the project.
 
 ## 📹 Demo Video
 
