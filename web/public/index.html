@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nillion's secure Herdera Playground</title>
+    <style>
+      :root {
+        --bg1: #0f0c29; /* dark blue */
+        --bg2: #302b63; /* indigo */
+        --bg3: #24243e; /* purple */
+        --card: rgba(255,255,255,0.08);
+        --border: rgba(255,255,255,0.12);
+        --text: #f8fafc;
+        --muted: #cbd5e1;
+        --user: linear-gradient(135deg,#ff7eb3 0%,#ff758c 50%,#ffb86c 100%);
+        --assistant: linear-gradient(135deg,#6ee7b7 0%,#3b82f6 50%,#a78bfa 100%);
+        --accent: #ffd166;
+      }
+      @keyframes floaty {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+        100% { transform: translateY(0px); }
+      }
+      body {
+        font-family: ui-rounded, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+        margin: 0; color: var(--text);
+        background: radial-gradient(1200px 800px at 20% -20%, #ff7eb320, transparent 60%),
+                    radial-gradient(1000px 700px at 110% 10%, #6ee7b720, transparent 60%),
+                    linear-gradient(135deg, var(--bg1), var(--bg2) 50%, var(--bg3));
+        min-height: 100vh;
+      }
+      header {
+        padding: 14px 16px; background: transparent; border-bottom: 1px solid var(--border);
+      }
+      .brand {
+        display: inline-flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 0.3px;
+        background: linear-gradient(90deg,#fff,#ffd166,#6ee7b7,#93c5fd,#f472b6);
+        -webkit-background-clip: text; background-clip: text; color: transparent;
+        filter: drop-shadow(0 2px 8px rgba(255,255,255,0.1));
+      }
+      .container { max-width: 900px; margin: 0 auto; padding: 18px; }
+      .panel { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 14px; backdrop-filter: blur(6px); }
+      .chat { height: 65vh; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+      .msg { display: inline-flex; max-width: 85%; padding: 12px 14px; border-radius: 14px; color: #0b1220; line-height: 1.35; white-space: pre-wrap; word-break: break-word; box-shadow: 0 6px 18px rgba(0,0,0,0.25); }
+      .msg.user { align-self: flex-end; background: var(--user); animation: floaty 4s ease-in-out infinite; }
+      .msg.assistant { align-self: flex-start; background: var(--assistant); }
+      .row { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; margin-top: 12px; }
+      .inputs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+      input[type="text"] { flex: 1; min-width: 220px; padding: 12px 12px; border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,0.06); color: var(--text); box-shadow: inset 0 0 0 999px rgba(255,255,255,0.02); }
+      input[type="text"]::placeholder { color: var(--muted); }
+      input[type="text"]:focus { outline: none; border-color: #93c5fd; box-shadow: 0 0 0 3px rgba(147,197,253,0.25); }
+      button { padding: 12px 16px; background: linear-gradient(135deg,#ffd166,#fca5a5,#86efac); color: #111827; border: none; border-radius: 12px; cursor: pointer; font-weight: 800; letter-spacing: 0.2px; box-shadow: 0 10px 24px rgba(255,209,102,0.25); transition: transform 0.08s ease, filter 0.15s ease; }
+      button:hover { filter: brightness(1.05); }
+      button:active { transform: translateY(1px); }
+      button:disabled { opacity: 0.65; cursor: not-allowed; }
+      .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
+      .avatar { width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.25); }
+      .bubble { display: flex; align-items: flex-start; gap: 8px; }
+      .user .avatar { background: #ff8fab; }
+      .assistant .avatar { background: #7dd3fc; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="brand">✨ Nillion's secure Herdera Playground</div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="panel">
+        <div class="inputs">
+          <input id="accountId" type="text" placeholder="Account ID (e.g., 0.0.1234)" />
+          <input id="privateKey" type="text" placeholder="Private Key (ECDSA)" />
+        </div>
+        <div id="chat" class="chat"></div>
+        <form id="form" class="row">
+          <input id="input" type="text" placeholder="Ask something Hedera… ✨ Try: What’s my HBAR balance?" />
+          <button id="send" type="submit">Send ➤</button>
+        </form>
+        <div class="hint">Tip: Provide Account ID and Private Key above to sign transactions from the browser session.</div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+  </html>
+
+
