@@ -3,6 +3,7 @@
   "reportUrl": "https://7c901ca2-f48d-4208-ab2e-fc560ea39f0b.workloads.nilcc.sandbox.nillion.network/nilcc/api/v2/report",
   "allowedDomains": [
     "7c901ca2-f48d-4208-ab2e-fc560ea39f0b.workloads.nilcc.sandbox.nillion.network",
-    "github.com"
+    "github.com",
+    "nilcc.nillion.com"
   ]
 }
