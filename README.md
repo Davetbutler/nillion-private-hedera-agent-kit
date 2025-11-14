@@ -1,10 +1,3 @@
-<iframe
-  src="https://nilcc.nillion.com/api/badge?verificationUrl=https%3A%2F%2Fgithub.com%2FDavetbutler%2Fnillion-private-hedera-agent-kit%2Fblob%2Fmain%2Fmeasurement-hash.json&reportUrl=https%3A%2F%2F7c901ca2-f48d-4208-ab2e-fc560ea39f0b.workloads.nilcc.sandbox.nillion.network%2Fnilcc%2Fapi%2Fv2%2Freport"
-  width={260}
-  height={90}
-  style={{ border: 'none' }}
-/>
-
 # Hedera Agent Kit - Private Implementation
 
 A submission for ETHOnline hackathon using HederaAgentKit.
