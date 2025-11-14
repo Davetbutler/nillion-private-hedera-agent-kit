@@ -1,0 +1,8 @@
+{
+  "measurementHash": "3e1340ffc5cb6fcdb80d26cf99ae471b4d4139e6258bae774151472edfa34010e2e2b9982fe97c50cd6459d8bf1dd7c0",
+  "reportUrl": "https://7c901ca2-f48d-4208-ab2e-fc560ea39f0b.workloads.nilcc.sandbox.nillion.network/nilcc/api/v2/report",
+  "allowedDomains": [
+    "7c901ca2-f48d-4208-ab2e-fc560ea39f0b.workloads.nilcc.sandbox.nillion.network",
+    "github.com"
+  ]
+}
